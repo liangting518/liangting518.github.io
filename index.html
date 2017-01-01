@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-angular" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/28/angular/" class="article-date">
+  <time datetime="2016-12-28T09:58:50.505Z" itemprop="datePublished">2016-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/angular/">angular1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="angular"><a href="#angular" class="headerlink" title="angular"></a>angular</h2><h3 id="什么是angular"><a href="#什么是angular" class="headerlink" title="什么是angular"></a>什么是angular</h3><ul>
+<li>学习曲线难(入门容易)</li>
+<li><p>框架 写好（按照人家的规则写好）（被动）人家有房子，我们放家具</p>
+<ul>
+<li>强约束</li>
+</ul>
+</li>
+<li><p>jQuery库 我们调用人家的方法（主动）自己搭建房子</p>
+</li>
+<li><p>MVVM/MVC</p>
+<ul>
+<li>mvc:<ul>
+<li>model(数据)view(视图)controller(控制器)</li>
+<li>view(视图) 人为操作-&gt;controller(控制器)-&gt;model(数据)-&gt;view</li>
+</ul>
+</li>
+<li>MVVM<ul>
+<li>model view viewModel<h3 id="使用angular"><a href="#使用angular" class="headerlink" title="使用angular"></a>使用angular</h3><h4 id="安装angular"><a href="#安装angular" class="headerlink" title="安装angular"></a>安装angular</h4>npm node package manager</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>先初始化package.json文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm init -y</div><div class="line">npm install angular</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>在当前的文件夹下生成node_modules文件将安好内容放入</p>
+</blockquote>
+<h2 id="使用angular-1"><a href="#使用angular-1" class="headerlink" title="使用angular"></a>使用angular</h2><ul>
+<li>ng-app<ul>
+<li>让angular自动启动，并且创建一个$rootScope根作用域（window）</li>
+</ul>
+</li>
+<li>ng-model<ul>
+<li>实现双向数据绑定，如果有数据会将数据绑定到输入框中，没数据会在当前作用域下声明，如果改变了输入框中的内容，会音响数据的变化，如果数据变化了，会将新的内容绑定到输入框中。</li>
+</ul>
+</li>
+<li>ng-init 初始化数据</li>
+<li>取值表达式<ul>
+<li>取当前作用域上的值，支持运算，赋值，三元表达式</li>
+</ul>
+</li>
+</ul>
+<h2 id="防止闪烁"><a href="#防止闪烁" class="headerlink" title="防止闪烁"></a>防止闪烁</h2><ul>
+<li>ng-bind用法同防止单个元素闪烁</li>
+<li>ng-cloak 需要自定义样式，将带有ng-cloak属性元素隐藏掉<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">     [ng-cloak]:&#123;dispaly:none&#125;;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="控制器和模块"><a href="#控制器和模块" class="headerlink" title="控制器和模块"></a>控制器和模块</h2><ul>
+<li><p>生成模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.module(&apos;moduleName&apos;,[]);</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建控制器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">angular.module(&apos;moduleName&apos;).controller(&apos;myCtrl&apos;,function($scope)&#123;</div><div class="line">    $scope 就是我们的viewModel</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>应用控制器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-controller=&apos;ctrlName&apos;&gt;&#123;&#123;作用域上的变量&#125;&#125;&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="控制器的特点"><a href="#控制器的特点" class="headerlink" title="控制器的特点"></a>控制器的特点</h2><ul>
+<li>1.主要控制数据</li>
+<li>2.不要在控制器中操作DOM(link函数中？后期会讲)</li>
+<li>3.控制器的作用范围(与 dom 标签结构平齐)</li>
+<li>4.控制器可以嵌套(嵌套的是带有控制器的dom节点，不是控制器)</li>
+<li><ol>
+<li>有继承关系，父作用域，不能继承子作用域，子作用域可以继承父作用域。<h2 id="配置全局属性"><a href="#配置全局属性" class="headerlink" title="配置全局属性"></a>配置全局属性</h2>-配置全局属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.run(function($rootScope)&#123;&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>防止压缩：代码在压缩的过程会将变量压缩成较短改变了形参的名字，angular无法获取，必须采用数组的形式，数组的第一项对应函数的第一个形参，以此类推</p>
+<h2 id="ng-repeat"><a href="#ng-repeat" class="headerlink" title="ng-repeat"></a>ng-repeat</h2><ul>
+<li>提供常用属性</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">    &lt;li ng-repeat=&quot;(键,值) in 数组&quot;&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>数组<br>如果数组内有重复项要加 track by $index</li>
+<li>对象<br>对象的键(属性名)和$index(索引)是不一样的<h2 id="作业-第一天作业"><a href="#作业-第一天作业" class="headerlink" title="作业 第一天作业"></a>作业 第一天作业</h2>-模拟数据实现购物车基本界面<h2 id="配置内网"><a href="#配置内网" class="headerlink" title="配置内网"></a>配置内网</h2>-第一次下载<h2 id="创建静态博客hexo"><a href="#创建静态博客hexo" class="headerlink" title="创建静态博客hexo"></a>创建静态博客hexo</h2><ul>
+<li>需要的环境 node.js,gitHub</li>
+<li>安装hexo<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>全局安装的意思：只在命令行下使用</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/12/28/angular/" data-id="cix8r8m9v0001zgb6mh8kzlmx" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/12/28/angular/">angular1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
